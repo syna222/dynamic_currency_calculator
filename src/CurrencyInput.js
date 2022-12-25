@@ -1,5 +1,5 @@
 
-export default function CurrencyInput({ownCurr, myVal, setVal, setCurr}){
+export default function CurrencyInput({id, ownCurr, myVal, setVal, setCurr}){
 
 
     function handleChange(e){       //e = event (here: onChange, target here: input)
@@ -12,7 +12,7 @@ export default function CurrencyInput({ownCurr, myVal, setVal, setCurr}){
     return (
         <div>
             <label>Enter value in {ownCurr}: </label>
-            <input type="text" value={myVal} onChange={handleChange}/>       
+            <input id={id} type="text" value={myVal} onChange={handleChange}/>       
         </div>);
 }
 

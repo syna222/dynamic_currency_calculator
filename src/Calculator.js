@@ -45,6 +45,15 @@ export default function Calculator(){
         }
     }
 
+    function handleClick(){                                //nicht die feine, englische, oder??
+        const input_1 = document.getElementById("1");
+        const input_2 = document.getElementById("2");
+        const input_3 = document.getElementById("3");
+        input_1.value = "";
+        input_2.value = "";
+        input_3.value = "";
+    }
+
     //test:
     //console.log("state-var value: ", value);
     //console.log("state-var currency: ", currency);
@@ -58,12 +67,14 @@ export default function Calculator(){
 
     return(
         <>
-            <h1>Show value: </h1>
-            <CurrencyInput ownCurr="EUR" myVal={euro} setVal={setValue} setCurr={setCurrency}/>
+            <h1>Currency Converter: </h1>
+            <CurrencyInput id="1" ownCurr="EUR" myVal={euro} setVal={setValue} setCurr={setCurrency}/>
             <br/>
-            <CurrencyInput ownCurr="USD" myVal={usd} setVal={setValue} setCurr={setCurrency}/>
+            <CurrencyInput id="2" ownCurr="USD" myVal={usd} setVal={setValue} setCurr={setCurrency}/>
             <br/>
-            <CurrencyInput ownCurr="GBP" myVal={gbp} setVal={setValue} setCurr={setCurrency}/>
+            <CurrencyInput id="3" ownCurr="GBP" myVal={gbp} setVal={setValue} setCurr={setCurrency}/>
+            <br/>
+            <button onClick={handleClick}>clear</button>
         </>
     );
 }
