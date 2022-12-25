@@ -45,7 +45,7 @@ export default function Calculator(){
         }
     }
 
-    function handleClick(){                                //nicht die feine, englische, oder??
+    function handleClick(){                                //nicht die feine englische, oder??
         const input_1 = document.getElementById("1");
         const input_2 = document.getElementById("2");
         const input_3 = document.getElementById("3");
@@ -67,7 +67,7 @@ export default function Calculator(){
 
     return(
         <>
-            <h1>Currency Converter: </h1>
+            <h1>Currency Converter (dynamic exchange rates): </h1>
             <CurrencyInput id="1" ownCurr="EUR" myVal={euro} setVal={setValue} setCurr={setCurrency}/>
             <br/>
             <CurrencyInput id="2" ownCurr="USD" myVal={usd} setVal={setValue} setCurr={setCurrency}/>
